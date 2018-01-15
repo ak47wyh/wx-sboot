@@ -1,0 +1,550 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 根据不同项目进行设置 */
+body {
+    font-size: 12px;
+    color: #434242;
+    font-family: Microsoft YaHei, Simsun;
+    background: #fff;
+    line-height: 12px;
+}
+
+a, del, ins {
+    text-decoration: none;
+}
+
+a {
+    color: #434242;
+    text-decoration: none;
+}
+
+input {
+    padding: 4px;
+    border: 1px solid #ddd;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-family: Microsoft YaHei, Simsun;
+    font-size: 12px;
+}
+
+select {
+    padding: 4px;
+    border: 1px solid #ddd;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    font-size: 12px;
+}
+textarea {
+    font-family: Microsoft YaHei, Simsun;
+    font-size: 12px;
+}
+.wrap {
+    display: block;
+}
+
+
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    border-top: 1px solid #cecece;
+    width:100%;
+    z-index: 998;
+}
+
+footer ul {
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+}
+
+footer li {
+    display: table-cell;
+}
+
+footer li a {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    position: relative;
+    text-align: center;
+    color: #333;
+}
+
+footer li a:before {
+    content: '';
+    width:28px;
+    height:22px;
+    margin: 6px auto 4px;
+    display: block;
+    background: url(../images/icon.png);
+    background-size: 200px 200px;
+
+}
+
+footer li.home a:before {
+    background-position: 0 -20px;
+}
+
+footer li.home a.active:before {
+    background-position: -28px -20px;
+}
+footer li.focus a:before {
+    background-position: 0 -45px;
+}
+footer li.focus a.active:before {
+    background-position: -30px -45px;
+}
+footer li.mine a:before {
+    background-position: 0 -70px;
+}
+
+footer li.mine a.active:before {
+    background-position: -30px -70px;
+}
+
+/* 按钮组 */
+/* btn 固定所有按钮宽高和间距 */
+.btn {
+    background: #6fba2c;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #f8f8f8;
+    text-align: center;
+    line-height: 36px;
+    border: none;
+    display: block;
+    cursor: pointer;
+    font-family: "微软雅黑";
+}
+
+.btn-sm{
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.btn-red {
+    background: #f00;
+}
+.btn-red:hover {
+    background: #d00;
+}
+
+.btn-green {
+    background: #2bb00e;
+}
+.btn-green:hover {
+    background: #2d9b15;
+}
+
+.btn-blue {
+    background: #1a7dbe;
+}
+.btn-blue:hover {
+    background: #1671ad;
+}
+
+.btn-orange {
+    background: #f39801;
+}
+.btn-orange:hover {
+    background: #e9860f;
+}
+
+
+/* lightpray_btn 网站浅灰色的渐变主按钮主要用于手机验证码等 */
+.lightpray_btn {
+    background: #d9d9d9;
+    background: -moz-linear-gradient(top, #fefeff, #d5d5d5);
+    background: -o-linear-gradient(top, #fefeff, #d5d5d5);
+    background: -webkit-linear-gradient(top, #fefeff, #d5d5d5);
+    background: -ms-linear-gradient(top, #fefeff, #d5d5d5);
+    background: linear-gradient(top, #fefeff, #d5d5d5);
+    border:1px solid #d7d7d9;
+    color: #555;
+}
+
+/* disabled_btn 不可点击的按钮 */
+.disabled_btn { background:#aaa; cursor:default;}
+
+/* gray_btn 可点击的灰色按钮 一般主要用于取消等不需要强调用户点击的按钮 */
+.gray_btn { background:#aaa;}
+.gray_btn:hover { background:#999;}
+
+
+/* 背景色模块 */
+.bg-red {
+    background-image: none !important;
+    background-color: #e02222 !important;
+    border-color: #e02222 !important;
+    color: #fff !important;
+}
+
+.bg-green {
+    background-image: none !important;
+    background-color: #35aa47 !important;
+    border-color: #35aa47 !important;
+    color: #fff !important;
+}
+
+.bg-blue {
+    background-image: none !important;
+    background-color: #4b8df8 !important;
+    border-color: #4b8df8 !important;
+    color: #fff !important;
+}
+
+.bg-yellow {
+    background-image: none !important;
+    background-color: #ffb848 !important;
+    border-color: #ffb848 !important;
+    color: #fff !important;
+}
+
+.bg-purple {
+    background-image: none !important;
+    background-color: #852b99 !important;
+    border-color: #852b99 !important;
+    color: #fff !important;
+}
+
+.bg-dark {
+    background-image: none !important;
+    background-color: #555555 !important;
+    border-color: #555555 !important;
+    color: #fff !important;
+}
+
+.bg-grey {
+    background-image: none !important;
+    background-color: #fafafa !important;
+    border-color: #fafafa !important;
+}
+
+/* 色彩系列设置 */
+
+.red {
+    color: #f00;
+}
+
+.green {
+    color: #090;
+}
+
+.blue {
+    color: #06f;
+}
+
+.orange {
+    color: #f60;
+}
+
+.gray {
+    color: #999;
+}
+
+/* form表单 */
+.form-actions {
+    margin-top: 30px;
+    display: block;
+}
+
+/* 所有的通用信息提示框 */
+.alert {
+    line-height: 20px;
+    padding: 6px 35px 6px 14px;
+    background: #fcf8e3;
+    border: 1px solid #fbeed5; /*border:1px solid #f00;*/
+    text-align: center;
+    z-index: 9999;
+}
+
+.alert h2 {
+    font-family: SimSun;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e00;
+}
+
+.alert a.close {
+    position: relative;
+    float: right;
+    margin-right: -21px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    opacity: 0.2;
+}
+
+.alert a.close:hover, .alert a.close:focus {
+    opacity: 0.4;
+}
+
+/* 404 */
+.page-404-full-page {
+    background-color: #fafafa !important;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.page-404-full-page .page-404 {
+    margin-top: 160px;
+}
+
+.page-404 {
+    text-align: center;
+}
+
+.page-404 .number {
+    color: #7bbbd6;
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 300;
+    font-family: "微软雅黑";
+    line-height: 100px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    position: relative;
+    text-align: right;
+    top: 15px;
+}
+
+.page-404 .details {
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 0;
+    text-align: left;
+    color: #666;
+    font-family: "微软雅黑" !important;
+}
+
+.page-404 .details h3 {
+    font-family: "微软雅黑" !important;
+    line-height: 40px;
+}
+
+/* 500 */
+.page-500-full-page {
+    background-color: #fafafa !important;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.page-500-full-page .page-500 {
+    margin-top: 160px;
+}
+
+.page-500 {
+    text-align: center;
+}
+
+.page-500 .number {
+    color: #ec8c8c;
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 300;
+    font-family: "微软雅黑";
+    line-height: 100px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    position: relative;
+    text-align: right;
+    top: 15px;
+}
+
+.page-500 .details {
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 0;
+    text-align: left;
+    color: #666;
+    font-family: "微软雅黑" !important;
+}
+
+.page-500 .details h3 {
+    font-family: "微软雅黑" !important;
+    line-height: 40px;
+}
+
+/* page分页 */
+.page {
+    width: 98%;
+    margin: 20px auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page ul {
+    display: inline-block;
+}
+
+.page ul li {
+    float: left;
+    margin-right: 4px;
+}
+
+.page .items, .page .total, .page .form {
+    display: inline-block;
+    line-height: 28px;
+}
+
+.page ul li.item a {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.page li.item a:hover {
+    border: 1px solid #f00;
+    color: #f00;
+}
+
+.page li a.active {
+    background: #f00 !important;
+    color: #fff;
+    border: 1px solid #f00 !important;
+}
+
+.page li a.active:hover {
+    color: #fff !important;
+}
+
+.page input.num {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #d7d7d7;
+}
+
+.page li.extra span, .page li.extra input, .page li.extra .btn {
+    margin-right: 4px;
+}
+
+.page .items .prev-disabled a, .page .items .next-disabled a {
+    color: #ccc;
+    cursor: default;
+}
+
+.page .items .prev-disabled a:hover, .page .items .next-disabled a:hover {
+    color: #ccc;
+    border: 1px solid #ddd;
+}
+
+/*  */
+.g-spacing-module{
+    padding: 0 10px;
+    background-color: #fff;
+}
+.g-border-t{
+    border-top: 1px #f5f5f5 solid;
+}
+.g-border-b{
+    border-bottom: 1px #f5f5f5 solid;
+}
+.g-lh-100{
+    line-height: 100%;
+}
+.g-lh-150{
+    line-height: 150%;
+}
+.g-lh-200{
+    line-height: 200%;
+}
+.g-color-green{
+    color: #6fba2c;
+}
+.g-color-gray{
+    color: #b2b2b2;
+}
+.g-bold{
+    font-weight: bold;
+}
+.g-row-module{
+    padding: 10px 0;
+    min-height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+.g-row-module *{
+    vertical-align: middle;
+}
+.g-star{
+    display: inline-block;
+}
+.g-star a{
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background: url("../images/icon-w.png") no-repeat -184px -4px;
+    background-size: 320px auto;
+}
+.g-star a.selected{
+    background: url("../images/icon-w.png") no-repeat -124px -4px;
+    background-size: 320px auto;
+}
+.g-hollow-button-green{
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #6fba2c;
+    border: 1px #6fba2c solid;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.g-number-control{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 18px;
+}
+.g-number-control *{
+    vertical-align: middle;
+}
+.g-number-control .num{
+    height: 16px;
+    line-height: 16px;
+    padding: 0;
+    margin: 0;
+    border: 1px #b2b2b2 solid;
+    text-align: center;
+    color: #6fba2c;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.g-number-control .add, .g-number-control .subtract{
+    display: inline-block;
+    line-height: 18px;
+    height: 18px;
+    padding: 0 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b2b2b2;
+}
+.predestination{
+    display: inline-block;
+    background: url("../images/icon-w.png") -5px -100px no-repeat;
+    background-size: 320px auto;
+    width: 40px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -2px;
+}

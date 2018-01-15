@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/public.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body id="index">
+<div class="wrap">
+    <div class="index-search-box">
+        <form action="首页.html" onsubmit="indexSearch()">
+            <div class="index-search-container">
+                <div class="search-input">
+                    <input type="search" value="" placeholder="搜索商品">
+                </div>
+                <a class="search-btn" href="javascript:void(0);">×</a>
+            </div>
+            <div class="index-search-bg">
+                <dl class="search-list">
+                    <dd>鸭梨</dd>
+                    <dd>雪梨</dd>
+                    <dd>香梨</dd>
+                </dl>
+            </div>
+        </form>
+    </div>
+
+    <div class="banner index-body">
+        <div class="main">
+            <!-- 没有找到商品-->
+            <div class="jtw-search-none"></div>
+            <div class="banner-wrap">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="商品详情.html"><img src="images/lunbo_01.jpg" width="100%"></a></div>
+                        <div class="swiper-slide"><a href="商品详情.html"><img src="images/lunbo_01.jpg" width="100%"></a></div>
+                        <div class="swiper-slide"><a href="商品详情.html"><img src="images/lunbo_01.jpg" width="100%"></a></div>
+                        <div class="swiper-slide"><a href="商品详情.html"><img src="images/lunbo_01.jpg" width="100%"></a></div>
+                        <div class="swiper-slide"><a href="商品详情.html"><img src="images/lunbo_01.jpg" width="100%"></a></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="main-cot">
+                <ul class="pro-list clearfix">
+                    <li class="pro-item">
+                        <a href="商品详情.html">
+                            <div class="proImg">
+                                <img class="pro-img" src="images/pro_01.png">
+                                <img src="images/none-img.jpg">
+                            </div>
+                            <div class="pro-info">
+                                <p class="proName"><em class="predestination"></em>新鲜水果 奶油草莓红</p>
+                                  <span class="proRemainning clearfix">
+                                      <p class="num">剩余13件</p>
+                                      <p class="price">￥200</p>
+                                  </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro-item">
+                        <a href="商品详情.html">
+                            <div class="proImg">
+                                <img class="pro-img" src="images/pro_02.png">
+                                <img src="images/none-img.jpg">
+                            </div>
+                            <div class="pro-info">
+                                <p class="proName">新鲜水果 奶油草莓红新鲜水果</p>
+                                  <span class="proRemainning clearfix">
+                                      <p class="num">剩余13件</p>
+                                      <p class="price">￥200</p>
+                                  </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro-item">
+                        <a href="商品详情.html">
+                            <div class="proImg">
+                                <img class="pro-img" src="images/pro_01.png">
+                                <img src="images/none-img.jpg">
+                            </div>
+                            <div class="pro-info">
+                                <p class="proName">新鲜水果 奶油草莓红</p>
+                                  <span class="proRemainning clearfix">
+                                      <p class="num">剩余13件</p>
+                                      <p class="price">￥200</p>
+                                  </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li class="home">
+                <a href="index.html" class="active">首页</a>
+            </li>
+            <li class="focus">
+                <a href="积分商城（我的关注）.html">关注</a>
+            </li>
+            <li class="mine">
+                <a href="积分商城（主页）.html">我的</a>
+            </li>
+        </ul>
+    </footer>
+</div>
+
+<!--提示框-->
+<!--<div class="pop-up">-->
+    <!--<div class="pop-body">-->
+        <!--<em class="icon"></em>-->
+        <!--<div class="text">-->
+            <!--抱歉通知您，您的配送地区<br/>-->
+            <!--暂不支持购买，要不您再转转？-->
+        <!--</div>-->
+        <!--<ul class="link">-->
+            <!--<li>-->
+                <!--<a href="javascript:void(0);">返回首页</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="javascript:void(0);">我知道了</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<div class="pop-bg"></div>-->
+<!--</div>-->
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/base.js"></script>
+<script>
+    $(function(){
+        $(".index-body").css("height", function () {
+            return $(window).height() - 95;
+        });
+        $("#index footer").css("position", "relative");
+    })
+</script>
+
+<!-- Swiper JS -->
+<script src="/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 3000,
+        autoplayDisableOnInteraction: false
+    });
+</script>
+</body>
+</html>
